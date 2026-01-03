@@ -34,3 +34,29 @@ def exercise_2_find_max():
 
 '''TEST'''
 # exercise_2_find_max()
+
+
+
+def exercise_3_reverse_words():
+    sentence = "Hello World Python"
+    print(f"Original: '{sentence}'")
+    
+    sentence = "Hello World Python"
+    sentence_new = sentence.split()
+    reverse_sentence = sentence_new[::-1]
+    result = " ".join(reverse_sentence)
+    
+    print(f"Reversed: '{result}'")
+
+
+'''TEST'''
+# exercise_3_reverse_words()
+
+if __name__ == "__main__":
+    print("--- Exercise 1 ---")
+    exercise_1_squares()
+    print("\n--- Exercise 2 ---")
+    exercise_2_find_max()
+    print("\n--- Exercise 3 ---")
+    exercise_3_reverse_words()
+
