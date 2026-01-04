@@ -24,6 +24,33 @@ def exercise_medium_common():
     for num in list_a:
         for char in list_b:
             if num == char:
-                comman.append(num)
+                common.append(num)
     
     print(f"Common Elements: {common}")
+
+
+def exercise_hard_rotate():
+    nums = [1, 2, 3, 4, 5]
+    k = 2
+    print(f"Original: {nums}, Rotate by: {k}")
+    
+    # TODO: Rotate the list to the right by k steps.
+    # Expected Result: [4, 5, 1, 2, 3]
+    # Hint: You can slice the list into two parts and swap them.
+    # Part 1: The last k elements. Part 2: The rest.
+    a = nums[:3]
+    b = nums[3:]
+    c = b + a
+    rotated = c
+    
+    print(f"Rotated:  {rotated}")
+
+
+
+if __name__ == "__main__":
+    print("--- Easy: Vowel Count ---")
+    exercise_easy_vowels()
+    print("\n--- Medium: Common Elements ---")
+    exercise_medium_common()
+    print("\n--- Hard: Rotate List ---")
+    exercise_hard_rotate()
