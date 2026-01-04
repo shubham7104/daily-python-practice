@@ -4,12 +4,12 @@ def exercise_easy_vowels():
     
     # TODO: Count the number of vowels (a, e, i, o, u) in the text.
     # Hint: Loop through the string and check 'if char.lower() in "aeiou":'
-    count = []
+    count = 0
     for char in text:
         if char.lower() in "aeiou":
-            count.append(char)
-    
-    print(f"Vowel Count: {len(count)}")
+            count += 1
+
+    print(f"Vowel Count: {count}")
 
 
 def exercise_medium_common():
@@ -22,9 +22,8 @@ def exercise_medium_common():
     # Expected Result: [4, 5]
     common = []
     for num in list_a:
-        for char in list_b:
-            if num == char:
-                common.append(num)
+        if num in list_b:
+            common.append(num)
     
     print(f"Common Elements: {common}")
 
@@ -33,15 +32,13 @@ def exercise_hard_rotate():
     nums = [1, 2, 3, 4, 5]
     k = 2
     print(f"Original: {nums}, Rotate by: {k}")
+
+    if not nums: 
+        return
     
-    # TODO: Rotate the list to the right by k steps.
-    # Expected Result: [4, 5, 1, 2, 3]
-    # Hint: You can slice the list into two parts and swap them.
-    # Part 1: The last k elements. Part 2: The rest.
-    a = nums[:3]
-    b = nums[3:]
-    c = b + a
-    rotated = c
+    k = k % len(nums) # for effective k if k > len(nums)
+
+    rotated = nums[-k:] + nums[:-k]
     
     print(f"Rotated:  {rotated}")
 
