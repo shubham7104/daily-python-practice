@@ -12,3 +12,18 @@ def exercise_easy_sum_evens():
             pass
             
     print(f"Sum of Evens: {total}")
+
+
+
+def exercise_medium_reverse_str():
+    text = "stressed"
+    print(f"Original: {text}")
+    
+    # TODO: Reverse the string WITHOUT using slicing (text[::-1]).
+    # Hint: Create an empty string var. Loop through 'text' and add each char 
+    # to the *beginning* of your new variable (e.g., new = char + new).
+    reversed_text = ""
+    for char in text:
+        reversed_text = char + reversed_text
+
+    print(f"Reversed: {reversed_text}")
