@@ -9,7 +9,7 @@ def exercise_easy_find_max():
     
     for num in numbers:
         if num > current_max:
-            num = current_max
+            current_max = num
         else:
             pass
     print(f"Maximum Value: {current_max}")
