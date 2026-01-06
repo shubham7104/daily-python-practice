@@ -10,8 +10,7 @@ def exercise_easy_find_max():
     for num in numbers:
         if num > current_max:
             current_max = num
-        else:
-            pass
+            
     print(f"Maximum Value: {current_max}")
 
 
@@ -33,3 +32,34 @@ def exercise_medium_palindrome():
 
 
     print(f"Is Palindrome?: {is_palindrome}")
+
+
+
+def exercise_hard_prime_check():
+    num = 17
+    print(f"Number to check: {num}")
+    
+    # TODO: Check if 'num' is a Prime Number.
+    # A prime number is greater than 1 and has no divisors other than 1 and itself.
+    # Hint: Loop from 2 up to (num - 1). If (num % i == 0), it is NOT prime.
+    # Don't forget to handle numbers < 2!
+    is_prime = True
+    
+    if num < 2:
+        is_prime = False
+    else:
+        for i in range(2,num):
+            if num % i == 0:
+                is_prime = False
+                break
+
+    print(f"Is Prime?: {is_prime}")
+
+
+if __name__ == "__main__":
+    print("--- Easy: Find Max ---")
+    exercise_easy_find_max()
+    print("\n--- Medium: Palindrome Check ---")
+    exercise_medium_palindrome()
+    print("\n--- Hard: Prime Checker ---")
+    exercise_hard_prime_check()
