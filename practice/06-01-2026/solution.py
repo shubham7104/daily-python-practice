@@ -13,3 +13,23 @@ def exercise_easy_find_max():
         else:
             pass
     print(f"Maximum Value: {current_max}")
+
+
+
+def exercise_medium_palindrome():
+    text = "racecar"
+    print(f"Text: {text}")
+    
+    # TODO: Check if the string is a palindrome (reads the same forwards and backwards).
+    # Expected Result: True
+    # Hint: You can use string slicing [::-1] to get the reverse, then compare it to 'text'.
+    is_palindrome = False
+    l1 =[]
+    for i in text:
+        l1.append(i)
+
+    if l1[::] == l1[::-1]:
+        is_palindrome = True
+
+
+    print(f"Is Palindrome?: {is_palindrome}")
