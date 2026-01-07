@@ -26,10 +26,8 @@ def exercise_medium_remove_duplicates():
     unique = []
     
     for num in numbers:
-        if num in unique:
-            pass
-        else:
-            unique.append(num)
+        if num not in unique:
+            unique.append(num)       
 
     print(f"Unique List: {unique}")   
 
@@ -45,11 +43,8 @@ def exercise_hard_factorial():
     # Multiply 'result' by the loop variable each time.
     result = 1
     
-    for i in range(n+1):
-        if i == 0:
-            pass
-        else:
-            result *= i
+    for i in range(1, n+1):
+        result *= i
 
     print(f"Factorial: {result}")
 
