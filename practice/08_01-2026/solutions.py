@@ -38,4 +38,29 @@ def exercise_medium_second_largest():
     print(f"Second Largest: {second_max}")
 
 
-exercise_medium_second_largest()
+
+
+def exercise_hard_manual_sort():
+    numbers = [64, 34, 25, 12, 22, 11, 90]
+    print(f"Unsorted: {numbers}")
+    
+    # TODO: Sort the list in Ascending order WITHOUT using .sort() or sorted().
+    # This is often done using "Bubble Sort".
+    # Hint: usage a nested loop (loop inside a loop).
+    # Compare numbers[j] with numbers[j+1]. If numbers[j] > numbers[j+1], swap them
+    n = len(numbers)
+    for i in range(n):
+        for j in range(0,n-i-1):
+            if numbers[j] > numbers[j+1]:
+                numbers[j],numbers[j+1] = numbers[j+1],numbers[j]
+
+    print(f"Sorted:   {numbers}")
+
+
+if __name__ == "__main__":
+    print("--- Easy: Count Uppercase ---")
+    exercise_easy_count_upper()
+    print("\n--- Medium: Second Largest ---")
+    exercise_medium_second_largest()
+    print("\n--- Hard: Manual Sort ---")
+    exercise_hard_manual_sort()
