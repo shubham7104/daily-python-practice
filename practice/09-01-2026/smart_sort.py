@@ -14,10 +14,9 @@ def bubble_sort(numbers,direction):
                 if numbers[j] < numbers [j+1]:
                     numbers[j],numbers[j+1] = numbers[j+1],numbers[j]
                     swapped = True
-
+                    
         if swapped == True:
             break
-
     
     return numbers
 
