@@ -14,6 +14,7 @@ def bubble_sort(numbers,direction):
                 if numbers[j] < numbers [j+1]:
                     numbers[j],numbers[j+1] = numbers[j+1],numbers[j]
                     swapped = True
+
         if swapped == True:
             break
 
@@ -24,7 +25,7 @@ def bubble_sort(numbers,direction):
 
 if __name__ == "__main__":
     # Test Case
-    data = [3, 2, 1, 5, 4]
+    data = [1, 2, 3, 4, 5]
     
     print("Original:", data)
     print("Ascending:", bubble_sort(data, "asc"))
